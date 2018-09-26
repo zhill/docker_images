@@ -6,7 +6,7 @@ COPY aws /root/.aws
 COPY docker_auth/config.json /root/.docker/config.json
 
 RUN apk update -y && \ 
-	apk add curl wget
+	apk add curl wget openssh-server lftp
 
 # Modify the wget binary to change the digest
 RUN echo 1 >> /usr/bin/wget
