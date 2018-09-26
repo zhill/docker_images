@@ -3,6 +3,7 @@ FROM alpine:latest
 # Add some fake secrets
 COPY ssh /root/.ssh
 COPY aws /root/.aws
+COPY docker_auth/config.json /root/.docker/config.json
 
 RUN apk update -y && \ 
 	apk add curl wget
